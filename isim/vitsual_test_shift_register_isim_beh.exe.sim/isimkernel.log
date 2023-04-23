@@ -1,0 +1,28 @@
+Command line:
+   vitsual_test_shift_register_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  42891
+
+Thu Mar 23 16:30:05 2023
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 198.586 Meg
+
+ Total Signals          : 19
+ Total Nets             : 33
+ Total Signal Drivers   : 10
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 173
+
+ Total Simulation Time: 0.02 sec
+
+ Current Memory Usage: 276.185 Meg
+
+Thu Mar 23 16:30:18 2023
+

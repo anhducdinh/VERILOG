@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/Ducanh-xillin-ise/bidirectional_shift_register/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/Ducanh-xillin-ise/bidirectional_shift_register/xst"
+elaborate
+-ifn shift_register.prj
+-ifmt mixed
