@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/Ducanh-xillin-ise/bidirectional_shift_register/vitsual_test_shift_register_isim_beh.exe" -prj "/home/ise/Ducanh-xillin-ise/bidirectional_shift_register/vitsual_test_shift_register_beh.prj" "work.vitsual_test_shift_register" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/Ducanh-xillin-ise/isilin/test_isim_beh.exe" -prj "/home/ise/Ducanh-xillin-ise/isilin/test_beh.prj" "work.test" "work.glbl" 

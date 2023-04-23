@@ -4,15 +4,15 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   13:11:03 03/07/2023
-// Design Name:   shift_register
-// Module Name:   /home/ise/Ducanh-xillin-ise/bidirectional_shift_register/test.v
-// Project Name:  bidirectional_shift_register
+// Create Date:   03:56:49 03/24/2023
+// Design Name:   asss
+// Module Name:   /home/ise/Ducanh-xillin-ise/isilin/test.v
+// Project Name:  isilin
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: shift_register
+// Verilog Test Fixture created by ISE for module: asss
 //
 // Dependencies:
 // 
@@ -24,22 +24,25 @@
 
 module test;
 
-	#(
- parameter N = 8 )
-( input wire CLOCK_50, reset,
-  input wire [16:0] SW,
-  output wire [N-1:0] LEDR
- );
- wire clk_Pulse1s;
- // clock 1 s
- clockTick #(.M(50000000), .N(26))
-  clock_1s (.clk(CLOCK_50), .reset(reset), .clkPulse(clk_Pulse1s));
- // shift_register testing with 1 sec clock pulse
- shift_register #(.N(N))
- shift_register_1s (
- .clk(clk_Pulse1s), .reset(reset),
- .data(SW[N-1:0]), .ctrl(SW[16:15]),
- .q_reg(LEDR)
- );
-endmodule
+	// Inputs
+	reg clk50m;
 
+	// Outputs
+	wire clk1hz;
+
+	// Instantiate the Unit Under Test (UUT)
+	asss uut (
+		.clk50m(clk50m), 
+		.clk1hz(clk1hz)
+	);
+
+	initial begin
+    clk50m = 0;
+		forever #10 clk50m = ~clk50m;
+    end
+  // output signal
+  always @(posedge clk1hz) 
+  begin
+    $display("clk1hz = %d", clk1hz);
+  end
+endmodule
